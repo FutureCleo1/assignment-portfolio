@@ -1,0 +1,316 @@
+/* 
+    Assignment Portfolio
+    CSS stylesheet
+*/
+
+/* General Page Settings */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f9;
+    color: #222222;
+}
+
+
+/* Navigation */
+
+header {
+    background-color: #111827;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #8b5cf6;
+}
+
+
+/* Hero Section */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #312e81
+    );
+
+    color: #ffffff;
+}
+
+.hero-content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 30px;
+}
+
+.welcome {
+    color: #a78bfa;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: clamp(45px, 7vw, 80px);
+    line-height: 1.05;
+    margin-bottom: 30px;
+}
+
+.hero p:not(.welcome) {
+    max-width: 650px;
+    font-size: 19px;
+    margin-bottom: 35px;
+    color: #e5e7eb;
+}
+
+
+/* Buttons */
+
+.button {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background-color: #8b5cf6;
+    color: #ffffff;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #7c3aed;
+    transform: translateY(-2px);
+}
+
+
+/* Assignment Section */
+
+.assignments {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 30px;
+}
+
+.section-heading {
+    margin-bottom: 50px;
+}
+
+.section-label {
+    color: #7c3aed;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2,
+.about h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.section-heading p {
+    max-width: 650px;
+    color: #666666;
+}
+
+
+/* Assignment Cards */
+
+.assignment-grid {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(250px, 1fr)
+    );
+
+    gap: 25px;
+}
+
+.assignment-card {
+    background-color: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.assignment-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-number {
+    color: #8b5cf6;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.assignment-card h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.assignment-card p {
+    color: #666666;
+    margin-bottom: 25px;
+}
+
+.card-button {
+    margin-top: auto;
+
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border: 2px solid #8b5cf6;
+
+    color: #7c3aed;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    text-align: center;
+}
+
+.card-button:hover {
+    background-color: #8b5cf6;
+    color: #ffffff;
+}
+
+
+/* About Section */
+
+.about {
+    background-color: #111827;
+    color: #ffffff;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 100px 30px;
+}
+
+.about .section-label {
+    color: #a78bfa;
+}
+
+.about h2 {
+    margin-bottom: 25px;
+}
+
+.about p {
+    color: #d1d5db;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #0b1120;
+    color: #9ca3af;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* Mobile Design */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero h2 {
+        font-size: 45px;
+    }
+
+    .section-heading h2,
+    .about h2 {
+        font-size: 34px;
+    }
+}
